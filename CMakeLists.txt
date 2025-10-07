@@ -19,8 +19,7 @@ gismo_fetch_directory(libMeshb
 
 # Set include directory
 set(LIBMESHB_INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/libMeshb-prefix/include CACHE INTERNAL "")
-
-set(LIBMESHB_LIBRARIES ${CMAKE_CURRENT_BINARY_DIR}/libMeshb-prefix/lib/libMeshb.7.a CACHE INTERNAL "")
+set(LIBMESHB_LIBRARIES   ${CMAKE_CURRENT_BINARY_DIR}/libMeshb-prefix/lib/libMeshb.7.a CACHE INTERNAL "")
 
 # Build
 include(ExternalProject)
@@ -36,7 +35,7 @@ ExternalProject_Add(libMeshb
   UPDATE_COMMAND    ""
   )
 
-include_directories(${gismo_SOURCE_DIR}/external/LRsplines/include;${CMAKE_CURRENT_BINARY_DIR}/LRsplines-build/include)
+include_directories(${LIBMESHB_INCLUDE_DIR})
 
 #Compiler wrapper
 add_library(${PROJECT_NAME} OBJECT ${CMAKE_CURRENT_SOURCE_DIR}/gsLibMeshb.h ${CMAKE_CURRENT_SOURCE_DIR}/gsLibMeshb.cpp)
