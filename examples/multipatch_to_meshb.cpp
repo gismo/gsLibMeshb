@@ -12,6 +12,7 @@
 
 //! [Include namespace]
 #include <gismo.h>
+#include <gsLibMeshb/gsLibMeshb.h>
 
 using namespace gismo;
 //! [Include namespace]
@@ -32,16 +33,14 @@ int main(int argc, char *argv[])
     
 
     //-------------------- Standard libmeshb example
-
+/*
 
        int i, NmbVer, NmbQad, ver, dim, *RefTab, (*QadTab)[5];
    long long InpMsh, OutMsh;
    double (*VerTab)[3];
 
 
-   /*-----------------------------------*/
-   /* Open mesh file "quad.meshb"       */
-   /*-----------------------------------*/
+   // Open mesh file "quad.meshb"     
 
    if(!(InpMsh = GmfOpenMesh("../sample_meshes/quad.mesh", GmfRead, &ver, &dim)))
       return(1);
@@ -80,9 +79,7 @@ int main(int argc, char *argv[])
    GmfCloseMesh(InpMsh);
 
 
-   /*-----------------------------------*/
-   /* Write the triangle mesh           */
-   /*-----------------------------------*/
+   // Write the triangle mesh         
 
    if(!(OutMsh = GmfOpenMesh("tri.mesh", GmfWrite, ver, dim)))
       return(1);
@@ -114,6 +111,6 @@ int main(int argc, char *argv[])
    free(RefTab);
    free(VerTab);
    
-    
+*/    
   return EXIT_SUCCESS;
 }
