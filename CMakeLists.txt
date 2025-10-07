@@ -21,7 +21,7 @@ gismo_fetch_directory(libMeshb
 
 include_directories(${gismo_externals}/libmeshb/sources)
 
-add_library(${PROJECT_NAME} INTERFACE ${ALGOIM_SOURCES} gsLibMeshb.h)
+add_library(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/gsLibMeshb.h ${CMAKE_CURRENT_SOURCE_DIR}/gsLibMeshb.cpp)
 
 aux_cpp_directory(${CMAKE_CURRENT_SOURCE_DIR}/examples FILES)
 foreach(file ${FILES})
